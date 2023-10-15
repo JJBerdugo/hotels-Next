@@ -1,0 +1,20 @@
+.containerMenu {
+    position: fixed;
+    opacity: 60%;
+    background-color: #ab9377;
+    margin-bottom: 20px;
+}
+
+.contentOptionMenu {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+.labelMenu {
+    color: #e26811;
+    font-weight: bold;
+}
+.labelMenu :hover {
+    color: #e26811;
+    cursor: pointer;
+}

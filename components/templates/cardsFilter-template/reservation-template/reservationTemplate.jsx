@@ -1,4 +1,4 @@
-import { HotelReservation } from "../../../organisms/cardsFilter/hotelreservation/hotelreservation";
+import { HotelReservation } from "../../../organisms/hotelreservation/hotelreservation";
 
 const ReservationTemplate = () => {
     return <HotelReservation />;

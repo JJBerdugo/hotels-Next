@@ -6,7 +6,7 @@ import { AppContext } from "@/app/store/CurrentProvider";
 
 const Detail = () => {
     const [selectedHotel, setSelectedHotel] = useState({
-        title: "",
+        name: "",
         description: "",
         photo: "",
         country: "",
@@ -20,7 +20,7 @@ const Detail = () => {
         if (storedHotel) {
             setSelectedHotel(JSON.parse(storedHotel));
         }
-        setDetailPage;
+        setDetailPage();
     }, []);
 
     const { name, photo, description, country, city } = selectedHotel;

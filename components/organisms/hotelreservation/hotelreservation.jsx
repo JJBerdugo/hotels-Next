@@ -1,10 +1,10 @@
 "use client";
-import { CardHotel } from "../../../molecules/cards/cards";
+import { CardHotel } from "../../molecules/cards/cards";
 import { useSelector } from "react-redux";
 
-export const HotelReservation = () => {
+export const HotelsReservation = () => {
     const listHotelsReservation = useSelector(
-        (state) => state.reservation.HotelReservation
+        (state) => state.reservation.hotelsReservation
     );
     return (
         <div>

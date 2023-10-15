@@ -2,8 +2,8 @@
 import { useState, useEffect, useContext } from "react";
 import { CardHotel } from "../../molecules/cards/cards";
 import { Header } from "../../molecules/header/header";
+import { hotelRooms } from "../../../src/utils/helper";
 import styles from "./cardsFilter.module.css";
-import { hotelRooms } from "@/utils/helper";
 import { Alert, AlertTitle, Snackbar, alertClasses } from "@mui/material";
 import { AppContext } from "@/app/store/CurrentProvider";
 
@@ -19,7 +19,7 @@ export const CardsFilters = ({ getDataHotels }) => {
     const { setHomePage } = useContext(AppContext);
 
     useEffect(() => {
-        setHomePage;
+        setHomePage();
     }, []);
     /*     const [hotelsData, setHotelsData] = useState([]);
 

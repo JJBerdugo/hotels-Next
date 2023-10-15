@@ -8,13 +8,14 @@ import styles from "./card.module.css";
 import { MainButton } from "../../atoms/button/Button";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { addReservation } from "@/app/store/reservSlice";
+import { useState } from "react";
 
 export const CardHotel = ({ hotel, snackbar }) => {
     const dispatch = useDispatch();
+    const [snackbarOpen, setSnackbarOpen] = useState(false);
 
     const listHotelsReservation = useSelector(
-        (state) => state.reservation.hotelReservation
+        (state) => state.reservation.hotelsReservation
     );
     const handleClick = () => {
         localStorage.setItem("selectedHotel", JSON.stringify(hotel));
@@ -25,7 +26,7 @@ export const CardHotel = ({ hotel, snackbar }) => {
             (hotels) => hotels.name === hotel.name
         );
         if (hotelExists) {
-            alert("<!el hotel esta agragado");
+            setSnackbarOpen(true);
         } else {
             dispatch(addReservation(hotel));
             snackbar(true);
@@ -85,7 +86,7 @@ export const CardHotel = ({ hotel, snackbar }) => {
                 <MainButton
                     className={styles.buttonCardHotel}
                     //onClick={() => snackbar(true)}
-                    onClick={() => handleReservation}
+                    onClick={handleReservation}
                 >
                     Reservas
                 </MainButton>

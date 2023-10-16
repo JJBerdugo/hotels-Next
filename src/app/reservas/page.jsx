@@ -1,6 +1,4 @@
-const {
-    default: ReservationTemplate,
-} = require("../../../components/templates/cardsFilter-template/reservation-template/reservationTemplate");
+import ReservationTemplate from "../../../components/templates/reservation-template/reservationTemplate";
 
 const Reservation = () => {
     return (
@@ -10,3 +8,4 @@ const Reservation = () => {
         </div>
     );
 };
+export default Reservation;

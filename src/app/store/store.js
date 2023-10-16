@@ -3,7 +3,7 @@ import { ReservSlice } from "./reservSlice";
 
 const store = configureStore({
     reducer: {
-        reservation: ReservSlice,
+        reservation: ReservSlice.reducer,
     },
 });
 

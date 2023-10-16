@@ -14,7 +14,9 @@ export const CurrentPageProvider = ({ children }) => {
     };
 
     return (
-        <AppContext.Provider value={(currentPage, setDetailPage, setHomePage)}>
+        <AppContext.Provider
+            value={{ currentPage, setDetailPage, setHomePage }}
+        >
             {children}
         </AppContext.Provider>
     );

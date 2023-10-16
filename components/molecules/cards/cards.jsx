@@ -9,6 +9,7 @@ import { MainButton } from "../../atoms/button/Button";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import { addReservation } from "@/app/store/reservSlice";
 
 export const CardHotel = ({ hotel, snackbar }) => {
     const dispatch = useDispatch();
